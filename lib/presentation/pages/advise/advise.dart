@@ -1,6 +1,7 @@
 
 
 import 'package:adviser/presentation/core/services/theme_service.dart';
+import 'package:adviser/presentation/pages/advise/widgets/advise_field.dart';
 import 'package:adviser/presentation/pages/advise/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -22,11 +23,11 @@ class AdviserPage extends StatelessWidget {
           })
         ],
       ),
-      body:   Padding(padding:  const  EdgeInsets.symmetric(horizontal: 50), 
+      body: const   Padding(padding:     EdgeInsets.symmetric(horizontal: 50), 
       child: Column(children: [
 
-        Expanded(child: Text("Your Adviser is waiting for you ", style: themedata.textTheme.headlineLarge)),
-       const  CustomButton(),
+        Expanded(child: Center(child: AdviseField(advise: "Example, Your day will be goood"),)),
+          CustomButton(),
       ],),)
     );
   }
