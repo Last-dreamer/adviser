@@ -49,10 +49,10 @@ class AdviserPage extends StatelessWidget {
                   }else if(state is AdviserLoading){
                     return Center(child: CircularProgressIndicator(color: themedata.colorScheme.secondary),);
                   }else if(state is AdviserLoaded){
-                   return   Center(
+                   return Center(
                     child:
-                        AdviseField(advise: state.adivce),
-                  );
+                        AdviseField(advise: state.advice),
+                   );
                   }else if(state is AdviserError){
                     return ErrorMessage(message: state.message);
                   }
