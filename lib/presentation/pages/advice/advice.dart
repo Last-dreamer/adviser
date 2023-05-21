@@ -1,25 +1,22 @@
 import 'package:adviser/presentation/core/services/theme_service.dart';
-import 'package:adviser/presentation/pages/advise/widgets/advise_field.dart';
-import 'package:adviser/presentation/pages/advise/widgets/bloc/adviser_bloc.dart';
-import 'package:adviser/presentation/pages/advise/widgets/custom_button.dart';
-import 'package:adviser/presentation/pages/advise/widgets/error_message.dart';
+ 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 
-class AdviserPageWrapperProvider extends StatelessWidget {
-  const AdviserPageWrapperProvider({super.key});
+class AdvicerPageWrapperProvider extends StatelessWidget {
+  const AdvicerPageWrapperProvider({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (_) => AdviserBloc(), child: const AdviserPage());
+    return BlocProvider(create: (_) => AdvicerBloc(), child: const AdvicerPage());
   }
 }
 
 
-class AdviserPage extends StatelessWidget {
-  const AdviserPage({super.key});
+class AdvicerPage extends StatelessWidget {
+  const AdvicerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,19 +39,19 @@ class AdviserPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 50),
           child: Column(
             children: [
-              Expanded(child: BlocBuilder<AdviserBloc, AdviserState>(
+              Expanded(child: BlocBuilder<AdvicerBloc, AdvicerState>(
                 builder: (context, state) {
-                  if(state is AdviserInitial){
+                  if(state is AdvicerInitial){
                     return Center(child: Text("Your advise is on your way.", style: themedata.textTheme.bodyLarge));
-                  }else if(state is AdviserLoading){
+                  }else if(state is AdvicerLoading){
                     return Center(child: CircularProgressIndicator(color: themedata.colorScheme.secondary),);
-                  }else if(state is AdviserLoaded){
+                  }else if(state is AdvicerLoaded){
                    return Center(
                     child:
-                        AdviseField(advise: state.advice),
+                        AdviceField(advise: state.advice),
                    );
-                  }else if(state is AdviserError){
-                    return ErrorMessage(message: state.message);
+                  }else if(state is AdvicerError){
+                    return Center(child: ErrorMessage(message: state.message));
                   }
                   return Container();
                 },

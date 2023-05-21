@@ -1,7 +1,6 @@
 
 
-
-import 'package:adviser/presentation/pages/advise/widgets/bloc/adviser_bloc.dart';
+  
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,7 +13,7 @@ class CustomButton extends StatelessWidget {
     final themdata = Theme.of(context);
     return InkResponse(
       onTap: (){
-        context.read<AdviserBloc>().add(AdviseRequestEvent());
+        context.read<AdvicerBloc>().add(AdviceRequestEvent());
       },
       child: Material(
         elevation: 20,
