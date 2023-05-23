@@ -1,3 +1,4 @@
+import 'package:adviser/di.dart';
 import 'package:adviser/presentation/core/services/theme_service.dart';
 import 'package:adviser/presentation/pages/advice/widgets/advice_field.dart';
 import 'package:adviser/presentation/pages/advice/widgets/bloc/advicer_bloc.dart';
@@ -14,7 +15,7 @@ class AdvicerPageWrapperProvider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (_) => AdvicerBloc(), child: const AdvicerPage());
+    return BlocProvider(create: (_) => di<AdvicerBloc>(), child: const AdvicerPage());
   }
 }
 
@@ -61,6 +62,7 @@ class AdvicerPage extends StatelessWidget {
                 },
               )),
               const CustomButton(),
+              const SizedBox(height: 10,),
             ],
           ),
         ));

@@ -6,6 +6,6 @@ import 'package:dartz/dartz.dart';
 
 import '../failures/failure.dart';
 
-abstract class AdviseRepo {
+abstract class AdviceRepo {
   Future<Either<Failure, AdviceEntity>> getAdviseFromDataSource();
 }

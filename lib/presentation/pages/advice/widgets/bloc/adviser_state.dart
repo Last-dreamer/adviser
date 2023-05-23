@@ -15,7 +15,6 @@ class AdvicerLoaded extends AdvicerState{
   final String advice;
   AdvicerLoaded({required  this.advice});
 
-
   @override
   List<Object?> get props => [advice];
 
