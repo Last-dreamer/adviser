@@ -8,7 +8,7 @@ import '../entities/advise_enitity.dart';
 
 class AdviseUseCases {
   final adviceRepo = AdviceRepoImpl();
-  Future<Either<Failure, AdviseEntity>> getAdvise() async {
+  Future<Either<Failure, AdviceEntity>> getAdvise() async {
      return adviceRepo.getAdviseFromDataSource();
   }
 }

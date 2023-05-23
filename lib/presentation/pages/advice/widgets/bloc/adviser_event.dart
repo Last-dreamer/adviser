@@ -1,7 +1,7 @@
-part of 'adviser_bloc.dart';
+part of 'advicer_bloc.dart';
 
 @immutable
-abstract class AdviserEvent {}
+abstract class AdvicerEvent {}
 
 
-class AdviseRequestEvent extends AdviserEvent {}
+class AdviceRequestEvent extends AdvicerEvent {}

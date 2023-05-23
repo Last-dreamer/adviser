@@ -1,4 +1,8 @@
 import 'package:adviser/presentation/core/services/theme_service.dart';
+import 'package:adviser/presentation/pages/advice/widgets/advice_field.dart';
+import 'package:adviser/presentation/pages/advice/widgets/bloc/advicer_bloc.dart';
+import 'package:adviser/presentation/pages/advice/widgets/custom_button.dart';
+import 'package:adviser/presentation/pages/advice/widgets/error_message.dart';
  
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -48,7 +52,7 @@ class AdvicerPage extends StatelessWidget {
                   }else if(state is AdvicerLoaded){
                    return Center(
                     child:
-                        AdviceField(advise: state.advice),
+                        AdviceField(advice: state.advice),
                    );
                   }else if(state is AdvicerError){
                     return Center(child: ErrorMessage(message: state.message));
