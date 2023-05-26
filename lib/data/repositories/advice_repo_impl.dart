@@ -10,7 +10,7 @@ import 'package:dartz/dartz.dart';
 
 class AdviceRepoImpl extends AdviceRepo {
     AdviceRepoImpl({required this.source});
-  final AdviceRemoteDataSourceImpl source;
+  final AdviceRemoteDataSource source;
 
   @override
   Future<Either<Failure, AdviceEntity>> getAdviseFromDataSource() async{
@@ -25,4 +25,5 @@ class AdviceRepoImpl extends AdviceRepo {
        return left(GeneralFailure());
      }
   }
+
 }
