@@ -3,10 +3,11 @@
 import 'package:adviser/data/datasources/advice_remote_datasource.dart';
 import 'package:adviser/data/exceptions/exceptions.dart';
 import 'package:adviser/data/models/advice_model.dart';
-import 'package:flutter_test/flutter_test.dart';
+
 import 'package:http/http.dart' as http;
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:test/test.dart';
 
 import 'advice_remote_datasource_test.mocks.dart';
 

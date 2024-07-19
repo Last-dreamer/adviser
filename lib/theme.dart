@@ -19,7 +19,6 @@ class AppTheme {
   static final Color _appbarColorDark = Colors.blueGrey.shade800;
 
   static const Color _iconColor = Colors.white;
-
   static const Color _accentColor = Color.fromRGBO(74, 217, 217, 1);
 
   // ******************

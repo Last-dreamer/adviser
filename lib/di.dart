@@ -15,11 +15,7 @@ Future<void> init() async {
 
   di.registerFactory(() => AdvicerBloc(adviceUseCases: di()));
   di.registerFactory(() => AdviceUseCases(adviceRepo: di()));
-
-
   di.registerFactory<AdviceRepo>(() => AdviceRepoImpl(source: di()));
-
   di.registerFactory<AdviceRemoteDataSource>(() => AdviceRemoteDataSourceImpl(client: di()));
   di.registerFactory(() => http.Client());
-
 }

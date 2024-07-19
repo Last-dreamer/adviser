@@ -10,8 +10,9 @@ import '../repositories/advice_repo.dart';
 class AdviceUseCases {
     AdviceRepo adviceRepo;
     AdviceUseCases({required this.adviceRepo});
-
+    
   Future<Either<Failure, AdviceEntity>> getAdvise() async {
      return adviceRepo.getAdviseFromDataSource();
   }
+  
 }

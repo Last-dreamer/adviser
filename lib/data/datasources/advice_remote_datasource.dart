@@ -23,8 +23,7 @@ class AdviceRemoteDataSourceImpl implements AdviceRemoteDataSource {
       throw ServerException();
     }else{
         var jsonBody = json.decode(resp.body);
-    return AdviceModel.fromJson(jsonBody);
+     return AdviceModel.fromJson(jsonBody);
     }
-   
   }
 }

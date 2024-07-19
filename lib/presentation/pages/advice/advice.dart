@@ -15,7 +15,8 @@ class AdvicerPageWrapperProvider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (_) => di<AdvicerBloc>(), child: const AdvicerPage());
+    return BlocProvider(create: (_) => di<AdvicerBloc>(), 
+    child: const AdvicerPage());
   }
 }
 
